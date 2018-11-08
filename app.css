@@ -66,6 +66,9 @@
     display: table-cell;
     vertical-align: middle;
   }
+  .demo-wrapper .demo .code span {
+      display: block;
+  }
   
   .options {
     text-align: center;
