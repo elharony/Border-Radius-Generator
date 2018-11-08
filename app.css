@@ -74,6 +74,7 @@
     text-align: center;
   }
   .options #copy-btn {
+    position: relative;
     width: 100px;
     height: 40px;
     background: #FFF;
@@ -85,5 +86,37 @@
     background: #000000cc;
     color: #FFF;
     outline: 0;
+  }
+  .popup {
+    position: fixed;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+  }
+  .popup.animated {
+    animation: popup 600ms ease
+  }
+  .popup .message {
+    font-size: 0.9em;
+    display: inline-block;
+    background: #000000cc;
+    color: #FFF;
+    padding: 10px 30px;
+  }
+  @keyframes popup {
+      0% {
+          top: -40px;
+          opacity: 0;
+      }
+      50% {
+          top: 0;
+          opacity: 1;
+      }
+      100% {
+          top: -40;
+          opacity: 0;
+      }
   }
   

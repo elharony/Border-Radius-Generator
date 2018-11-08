@@ -31,9 +31,17 @@ function showCode(c1, c2, c3, c4) {
 }
 
 // Copy To Clipboard
-const copyBtn = document.querySelector("#copy-btn") 
+const copyBtn = document.querySelector("#copy-btn")
+const popup = document.querySelector(".popup")
 copyBtn.addEventListener("click", () => {
     copyToClipboard()
+
+    // Add the 'animated' class to the popup
+    popup.classList.add("animated")
+    // Remove that class
+    setTimeout(() => {
+        popup.classList.remove("animated")
+    }, 500)
 })
 
 function copyToClipboard(){
