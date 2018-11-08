@@ -25,3 +25,29 @@ function showCode(c1, c2, c3, c4) {
     const codeNoPrefix = `border-radius: ${c1}px ${c2}px ${c3}px ${c4}px`
     return codeNoPrefix
 }
+
+
+// Copy To Clipboard
+const copyBtn = document.querySelector("#copy-btn") 
+copyBtn.addEventListener("click", () => {
+    copyToClipboard(code.innerHTML)
+})
+
+function copyToClipboard(code){
+    code = document.createTextNode(code);
+    document.body.appendChild(code);
+    if (document.body.createTextRange) {
+        var d = document.body.createTextRange();
+        d.moveToElementText(code);
+        d.select();
+        document.execCommand("copy");
+    } else {
+        var d = document.createRange();
+        d.selectNodeContents(code);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(d);
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();
+    }
+    code.remove();
+}
