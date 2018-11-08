@@ -1,46 +1,86 @@
 * {
     margin: 0;
     padding: 0;
-}
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-}
-
-
-.container {
+    font-family: 'Ubuntu Condensed', sans-serif;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  body {
+    background: #eaeaea;
+  }
+  
+  .container {
     width: 600px;
-    margin: 0 auto;
-}
-
-.demo-wrapper {
+    background: #f7f7f7;
+    padding: 50px;
+    margin: 50px auto;
+  }
+  
+  .intro {
+    text-align: center;
+  }
+  
+  .demo-wrapper {
     position: relative;
-}
-.demo-wrapper .border-corner {
+    margin: 15px 0;
+  }
+  .demo-wrapper .border-corner {
     position: absolute;
     width: 30px;
     height: 20px;
+    line-height: 20px;
+    border: 2px solid #000000cc;
+    box-sizing: border-box;
     text-align: center;
-}
-.demo-wrapper .border-corner:nth-child(2) {
+    transition: all 300ms ease;
+  }
+  .demo-wrapper .border-corner:focus {
+    background: #000000cc;
+    color: #FFFFFF;
+    outline: 0;
+  }
+  .demo-wrapper .border-corner:nth-child(2) {
     right: 0;
-}
-.demo-wrapper .border-corner:nth-child(3) {
+  }
+  .demo-wrapper .border-corner:nth-child(3) {
     right: 0;
     bottom: 0;
-}
-.demo-wrapper .border-corner:nth-child(4) {
+  }
+  .demo-wrapper .border-corner:nth-child(4) {
     bottom: 0;
-}
-.demo {
+  }
+  
+  .demo-wrapper .demo {
     display: table;
     text-align: center;
-    width: 300px;
+    width: 85%;
     height: 300px;
     margin: 0 auto;
-    background: #e8e8e8;
-}
-.demo .code {
+    color: #eaeaea;
+    background: #000000cc;
+  }
+  .demo-wrapper .demo .code {
     display: table-cell;
     vertical-align: middle;
-}
+  }
+  
+  .options {
+    text-align: center;
+  }
+  .options #copy-btn {
+    width: 100px;
+    height: 40px;
+    background: #FFF;
+    border: 2px solid #000000cc;
+    transition: all 300ms ease;
+    cursor: pointer;
+  }
+  .options #copy-btn:hover, .options #copy-btn:focus {
+    background: #000000cc;
+    color: #FFF;
+    outline: 0;
+  }
+  
