@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.border-radius-controls {
+    display: flex;
+    margin: 20px 0;
+}
+.border-radius-controls input {
+    width: 25%;
+}
+.demo {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background: #e8e8e8;
+}
