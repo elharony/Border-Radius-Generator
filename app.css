@@ -2,21 +2,45 @@
     margin: 0;
     padding: 0;
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+
 .container {
     width: 600px;
     margin: 0 auto;
 }
 
-.border-radius-controls {
-    display: flex;
-    margin: 20px 0;
+.demo-wrapper {
+    position: relative;
 }
-.border-radius-controls input {
-    width: 25%;
+.demo-wrapper .border-corner {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+}
+.demo-wrapper .border-corner:nth-child(2) {
+    right: 0;
+}
+.demo-wrapper .border-corner:nth-child(3) {
+    bottom: 0;
+}
+.demo-wrapper .border-corner:nth-child(4) {
+    right: 0;
+    bottom: 0;
 }
 .demo {
+    display: table;
+    text-align: center;
     width: 300px;
     height: 300px;
     margin: 0 auto;
     background: #e8e8e8;
+}
+.demo .code {
+    display: table-cell;
+    vertical-align: middle;
 }
