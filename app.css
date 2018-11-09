@@ -116,6 +116,19 @@
 .options #shape-7 {
     border-radius: 0 15px 0 15px;
 }
+.options #shape-8 {
+    border-radius: 15px 15px 15px 0;
+}
+.options #shape-9 {
+    border-radius: 15px 15px 0 15px;
+}
+.options #shape-10 {
+    border-radius: 15px 0 15px 15px;
+}
+.options #shape-11 {
+    border-radius: 0 15px 15px 15px;
+}
+
 
 
   .popup {

@@ -106,6 +106,30 @@ const shapesCornerValues = [
         c3_val: 0,
         c4_val: 150
     },
+    {
+        c1_val: 150,
+        c2_val: 150,
+        c3_val: 150,
+        c4_val: 0
+    },
+    {
+        c1_val: 150,
+        c2_val: 150,
+        c3_val: 0,
+        c4_val: 150
+    },
+    {
+        c1_val: 150,
+        c2_val: 0,
+        c3_val: 150,
+        c4_val: 150
+    },
+    {
+        c1_val: 0,
+        c2_val: 150,
+        c3_val: 150,
+        c4_val: 150
+    }
 ]
 
 
