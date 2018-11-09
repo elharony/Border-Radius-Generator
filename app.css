@@ -138,7 +138,33 @@
 .options #shape-11 {
     border-radius: 0 15px 15px 15px;
 }
-
+.options #shape-12 {
+    border-radius: 15px 0 0 0;
+}
+.options #shape-13 {
+    border-radius: 0 15px 0 0;
+}
+.options #shape-14 {
+    border-radius: 0 0 15px 0;
+}
+.options #shape-15 {
+    border-radius: 0 0 0 15px;
+}
+.options #shape-16 {
+    border-radius: 30px 0 0 0;
+}
+.options #shape-17 {
+    border-radius: 0 30px 0 0;
+}
+.options #shape-18 {
+    border-radius: 0 0 30px 0;
+}
+.options #shape-19 {
+    border-radius: 0 0 0 30px;
+}
+.options #shape-20 {
+    border-radius: 5px 5px 5px 5px;
+}
 
 
   .popup {
