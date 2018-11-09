@@ -18,6 +18,13 @@
     padding: 50px;
     margin: 50px auto;
   }
+
+  hr {
+      height: 0;
+      margin: 20px 0;
+      border: 0;
+      border-bottom: 1px solid #eaeaea;
+  }
   
   .intro {
     text-align: center;
@@ -71,10 +78,13 @@
   }
   
   .options {
+    width: 75%;
+    margin: 0 auto;
     text-align: center;
   }
   .options button {
     background: #FFF;
+    margin: 5px;
     border: 2px solid #000000cc;
     transition: all 300ms ease;
     cursor: pointer;
