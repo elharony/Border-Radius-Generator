@@ -17,6 +17,7 @@ for(let i = 0; i < corners.length; i++) {
     })
 }
 
+
 function showCode(c1, c2, c3, c4) {
     const codeNoPrefix = `
 <span>-webkit-border-radius: ${c1}px ${c2}px ${c3}px ${c4}px;</span>
@@ -56,3 +57,12 @@ function copyToClipboard(){
   document.execCommand("copy")
   document.body.removeChild(tempTxt)
 }
+
+const shape_1 = document.querySelector("#shape-1")
+shape_1.addEventListener("click", () => {
+    c1.value = 150
+    c2.value = 150
+    c3.value = 150
+    c4.value = 150
+    applyDemo()
+})
