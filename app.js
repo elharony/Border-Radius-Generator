@@ -17,6 +17,13 @@ for(let i = 0; i < corners.length; i++) {
     })
 }
 
+function applyDemo() {
+    // Change the 'border-radius' value of the demo
+    let value = `${c1.value}px ${c2.value}px ${c3.value}px ${c4.value}px`
+    demo.style.borderRadius = value
+    // View the code
+    code.innerHTML = showCode(c1.value, c2.value, c3.value, c4.value)
+}
 
 function showCode(c1, c2, c3, c4) {
     const codeNoPrefix = `
@@ -25,14 +32,6 @@ function showCode(c1, c2, c3, c4) {
 <span>border-radius: ${c1}px ${c2}px ${c3}px ${c4}px;</span>
     `
     return codeNoPrefix
-}
-
-function applyDemo() {
-    // Change the 'border-radius' value of the demo
-    let value = `${c1.value}px ${c2.value}px ${c3.value}px ${c4.value}px`
-    demo.style.borderRadius = value
-    // View the code
-    code.innerHTML = showCode(c1.value, c2.value, c3.value, c4.value)
 }
 
 // Copy To Clipboard
@@ -59,65 +58,75 @@ function copyToClipboard(){
 }
 
 // Pre-Developed Shapes
-const shape_1 = document.querySelector("#shape-1")
-shape_1.addEventListener("click", () => {
-    c1.value = 150
-    c2.value = 150
-    c3.value = 150
-    c4.value = 150
-    applyDemo()
-})
+let c1_val = c1.value,
+    c2_val = c2.value,
+    c3_val = c3.value,
+    c4_val = c4.value
 
-const shape_2 = document.querySelector("#shape-2")
-shape_2.addEventListener("click", () => {
-    c1.value = 150
-    c2.value = 150
-    c3.value = 0
-    c4.value = 0
-    applyDemo()
-})
+const shapesCornerValues = [
+    {
+        c1_val: 150,
+        c2_val: 150,
+        c3_val: 150,
+        c4_val: 150
+    },
+    {
+        c1_val: 150,
+        c2_val: 150,
+        c3_val: 0,
+        c4_val: 0
+    },
+    {
+        c1_val: 0,
+        c2_val: 150,
+        c3_val: 150,
+        c4_val: 0,
+    },
+    {
+        c1_val: 0,
+        c2_val: 0,
+        c3_val: 150,
+        c4_val: 150
+    },
+    {
+        c1_val: 150,
+        c2_val: 0,
+        c3_val: 0,
+        c4_val: 150
+    },
+    {
+        c1_val: 150,
+        c2_val: 0,
+        c3_val: 150,
+        c4_val: 0
+    },
+    {
+        c1_val: 0,
+        c2_val: 150,
+        c3_val: 0,
+        c4_val: 150
+    }
+]
 
-const shape_3 = document.querySelector("#shape-3")
-shape_3.addEventListener("click", () => {
-    c1.value = 0
-    c2.value = 150
-    c3.value = 150
-    c4.value = 0
-    applyDemo()
-})
 
-const shape_4 = document.querySelector("#shape-4")
-shape_4.addEventListener("click", () => {
-    c1.value = 0
-    c2.value = 0
-    c3.value = 150
-    c4.value = 150
-    applyDemo()
-})
 
-const shape_5 = document.querySelector("#shape-5")
-shape_5.addEventListener("click", () => {
-    c1.value = 150
-    c2.value = 0
-    c3.value = 0
-    c4.value = 150
-    applyDemo()
-})
+const shape_1 = document.querySelector("#shape-1"),
+    shape_2 = document.querySelector("#shape-2"),
+    shape_3 = document.querySelector("#shape-3"),
+    shape_4 = document.querySelector("#shape-4"),
+    shape_5 = document.querySelector("#shape-5"),
+    shape_6 = document.querySelector("#shape-6"),
+    shape_7 = document.querySelector("#shape-7")
 
-const shape_6 = document.querySelector("#shape-6")
-shape_6.addEventListener("click", () => {
-    c1.value = 150
-    c2.value = 0
-    c3.value = 150
-    c4.value = 0
-    applyDemo()
-})
+const shapesElements = [shape_1, shape_2, shape_3, shape_4, shape_5, shape_6, shape_7]
 
-const shape_7 = document.querySelector("#shape-7")
-shape_7.addEventListener("click", () => {
-    c1.value = 0
-    c2.value = 150
-    c3.value = 0
-    c4.value = 150
-    applyDemo()
-})
+for(let i = 0; i < shapesElements.length; i++) {
+    shapesElements[i].addEventListener("click", () => {
+        // Overwrite the current demo's values with each shape values
+        c1.value = shapesCornerValues[i].c1_val
+        c2.value = shapesCornerValues[i].c2_val
+        c3.value = shapesCornerValues[i].c3_val
+        c4.value = shapesCornerValues[i].c4_val
+        applyDemo()
+    })
+}
