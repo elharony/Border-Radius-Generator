@@ -105,20 +105,12 @@ const shapesCornerValues = [
         c2_val: 150,
         c3_val: 0,
         c4_val: 150
-    }
+    },
 ]
 
 
 
-const shape_1 = document.querySelector("#shape-1"),
-    shape_2 = document.querySelector("#shape-2"),
-    shape_3 = document.querySelector("#shape-3"),
-    shape_4 = document.querySelector("#shape-4"),
-    shape_5 = document.querySelector("#shape-5"),
-    shape_6 = document.querySelector("#shape-6"),
-    shape_7 = document.querySelector("#shape-7")
-
-const shapesElements = [shape_1, shape_2, shape_3, shape_4, shape_5, shape_6, shape_7]
+const shapesElements = document.querySelectorAll(".shape")
 
 for(let i = 0; i < shapesElements.length; i++) {
     shapesElements[i].addEventListener("click", () => {
