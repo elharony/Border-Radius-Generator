@@ -58,11 +58,66 @@ function copyToClipboard(){
   document.body.removeChild(tempTxt)
 }
 
+// Pre-Developed Shapes
 const shape_1 = document.querySelector("#shape-1")
 shape_1.addEventListener("click", () => {
     c1.value = 150
     c2.value = 150
     c3.value = 150
+    c4.value = 150
+    applyDemo()
+})
+
+const shape_2 = document.querySelector("#shape-2")
+shape_2.addEventListener("click", () => {
+    c1.value = 150
+    c2.value = 150
+    c3.value = 0
+    c4.value = 0
+    applyDemo()
+})
+
+const shape_3 = document.querySelector("#shape-3")
+shape_3.addEventListener("click", () => {
+    c1.value = 0
+    c2.value = 150
+    c3.value = 150
+    c4.value = 0
+    applyDemo()
+})
+
+const shape_4 = document.querySelector("#shape-4")
+shape_4.addEventListener("click", () => {
+    c1.value = 0
+    c2.value = 0
+    c3.value = 150
+    c4.value = 150
+    applyDemo()
+})
+
+const shape_5 = document.querySelector("#shape-5")
+shape_5.addEventListener("click", () => {
+    c1.value = 150
+    c2.value = 0
+    c3.value = 0
+    c4.value = 150
+    applyDemo()
+})
+
+const shape_6 = document.querySelector("#shape-6")
+shape_6.addEventListener("click", () => {
+    c1.value = 150
+    c2.value = 0
+    c3.value = 150
+    c4.value = 0
+    applyDemo()
+})
+
+const shape_7 = document.querySelector("#shape-7")
+shape_7.addEventListener("click", () => {
+    c1.value = 0
+    c2.value = 150
+    c3.value = 0
     c4.value = 150
     applyDemo()
 })
