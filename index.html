@@ -8,10 +8,208 @@
     <title>[NEW] Online CSS Border Radius Generator | +20 Real Example </title>
     <meta name="description" content="The NEW Online CSS Border Radius Generator, get the best border-radius playground, with +20 border-radius real examples packed in an elegant design experience" />
     <meta name="keywords" content="online border-radius generator, border radius, border-radius real example shapes, css border-radius examples, border-radius copy/paste css code, use prefix with border-radius, css3 border radius, webkit border radius, firefox border radius, css template" />
-    <link rel="stylesheet" href="app.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+body {
+    background: #eaeaea;
+}
+.container {
+    max-width: 400px;
+    background: #f7f7f7;
+    padding: 50px;
+    margin: 50px auto;
+}
+hr {
+    height: 0;
+    margin: 20px 0;
+    border: 0;
+    border-bottom: 1px solid #eaeaea;
+}
+.intro {
+    text-align: center;
+}
+.demo-wrapper {
+    position: relative;
+    margin: 15px 0;
+}
+.demo-wrapper .border-corner {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+    border: 2px solid #000000cc;
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.demo-wrapper .border-corner:focus {
+    background: #000000cc;
+    color: #FFFFFF;
+    outline: 0;
+}
+.demo-wrapper .border-corner:nth-child(2) {
+    right: 0;
+}
+.demo-wrapper .border-corner:nth-child(3) {
+    right: 0;
+    bottom: 0;
+}
+.demo-wrapper .border-corner:nth-child(4) {
+    bottom: 0;
+}
+.demo-wrapper .demo {
+    display: table;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    color: #eaeaea;
+    background: #000000cc;
+    transition: all 400ms cubic-bezier(1, -0.01, 0.46, 0.19) 
+}
+.demo-wrapper .demo .code {
+    display: table-cell;
+    vertical-align: middle;
+}
+.demo-wrapper .demo .code span {
+    display: block;
+}
+.options {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+.options button {
+    background: #FFF;
+    margin: 5px;
+    border: 2px solid #000000cc;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+.options #copy-btn {
+    width: 100px;
+    height: 40px;
+}
+.options button:hover, .options button:focus {
+    background: #000000cc;
+    color: #FFF;
+    outline: 0;
+}
+.options .shape {
+    width: 30px;
+    height: 30px;
+    background: 0;
+    border: 0;
+    border: 1px solid #000000cc;
+}
+.options #shape-1 {
+    border-radius: 50%;
+}
+.options #shape-2 {
+    border-radius: 15px 15px 0 0;
+}
+.options #shape-3 {
+    border-radius: 0 15px 15px 0;
+}
+.options #shape-4 {
+    border-radius: 0 0 15px 15px;
+}
+.options #shape-5 {
+    border-radius: 15px 0 0 15px;
+}
+.options #shape-6 {
+    border-radius: 15px 0 15px 0;
+}
+.options #shape-7 {
+    border-radius: 0 15px 0 15px;
+}
+.options #shape-8 {
+    border-radius: 15px 15px 15px 0;
+}
+.options #shape-9 {
+    border-radius: 15px 15px 0 15px;
+}
+.options #shape-10 {
+    border-radius: 15px 0 15px 15px;
+}
+.options #shape-11 {
+    border-radius: 0 15px 15px 15px;
+}
+.options #shape-12 {
+    border-radius: 15px 0 0 0;
+}
+.options #shape-13 {
+    border-radius: 0 15px 0 0;
+}
+.options #shape-14 {
+    border-radius: 0 0 15px 0;
+}
+.options #shape-15 {
+    border-radius: 0 0 0 15px;
+}
+.options #shape-16 {
+    border-radius: 30px 0 0 0;
+}
+.options #shape-17 {
+    border-radius: 0 30px 0 0;
+}
+.options #shape-18 {
+    border-radius: 0 0 30px 0;
+}
+.options #shape-19 {
+    border-radius: 0 0 0 30px;
+}
+.options #shape-20 {
+    border-radius: 5px 5px 5px 5px;
+}
+.popup {
+    position: fixed;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+}
+.popup.animated {
+    animation: popup 600ms ease 
+}
+.popup .message {
+    font-size: 0.9em;
+    display: inline-block;
+    background: #000000cc;
+    color: #FFF;
+    padding: 10px 30px;
+}
+@keyframes popup {
+    0% {
+        top: -40px;
+        opacity: 0;
+   }
+    50% {
+        top: 0;
+        opacity: 1;
+   }
+    100% {
+        top: -40;
+        opacity: 0;
+   }
+}
+
+    </style>
+    <link rel="stylesheet" href="app.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    
 </head>
 <body>
     <div class="container">
@@ -55,5 +253,16 @@
         <div class="popup"><span class="message">Copied!</span></div>
     </div>
     <script src="app.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128978734-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-128978734-1');
+    </script>
+
 </body>
 </html>
