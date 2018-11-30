@@ -158,6 +158,9 @@ hr {
 .options #shape-20 {
     border-radius: 5px 5px 5px 5px;
 }
+.contribute a {
+    color: #000000
+}
 .popup {
     position: fixed;
     top: -40px;
