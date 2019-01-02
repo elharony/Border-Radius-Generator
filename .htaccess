@@ -1,0 +1,4 @@
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?border-radius\.online
+RewriteRule ^(.*)$ https://border-radius.online/$1 [R,L]
